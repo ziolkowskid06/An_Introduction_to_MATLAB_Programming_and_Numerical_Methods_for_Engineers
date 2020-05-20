@@ -1,1 +1,43 @@
+% 8. Compute the area of a triangle with base 10 and height 12.
+base = 10;
+height = 12; 
+area = 0.5*base*height
+
+% 9. Compute the surface area and volume of the cylinder with radius 5 and height 3.
+radius = 5;
+height = 3;
+volume = pi*(r^2)*height
+surface = 2*pi*r*height + 2*pi*(r^2)
+
+% 10. Compute the slope between the points (3, 4) and (5, 9).
+slope = (180/pi)*atan((9-4)/(5-3))
+
+% 11. Compute distance between the points (3, 4) and (5, 9).
+distance = sqrt((5-3)^2 + (9-4)^2)
+
+% 12. Compute 6!
+factorial(6)
+
+% 13. Compute number of leap years between the years 1500 and 2010.
+floor((2010-1500-1)/4)
+
+% 14. Use Ramanujan's formula to approximate pi.
+fornat long
+i = 1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
