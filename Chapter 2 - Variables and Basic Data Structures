@@ -20,3 +20,30 @@ sum(M, 2)   & Sum of each row (horizontal addition)
 sum(M, 1)   % Sum of each column (vertical addition)
 
 %% 9. Create uniformly distributed array of 1000 numbers between 0 and 1. Verify that it is close to 0.5.
+a = 0;
+b = 1;
+r = a + (b-a) .* rand(1000, 1);    % Creates 1000 rows
+mean(r)
+
+%% 10. Assign the string '123' to S. Change to double and assign to N. Verify that S is a char and N is a double.
+S = '123';
+N = str2num(S);
+class(S)
+class(N)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
