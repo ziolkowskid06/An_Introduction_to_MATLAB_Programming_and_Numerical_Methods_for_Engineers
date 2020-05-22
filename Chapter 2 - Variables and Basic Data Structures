@@ -125,9 +125,15 @@ A = (1:2:21)
 %% 31. Display rhre third, fourth, and the seventh element of A.
 A([3 4 7])
 
+%% 32. Assign an array starting at 17, and ending at 23 and cotaining 101 elements.
+M = linspace(17, 23, 100)
 
+%% 33. Give las element of M
+M(end)
 
-
+%% 36. Clear variables and clear the screen
+clear;
+clc;
 
 
 
