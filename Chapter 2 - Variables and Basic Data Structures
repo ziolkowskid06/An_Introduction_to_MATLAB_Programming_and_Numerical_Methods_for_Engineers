@@ -76,10 +76,54 @@ K(1) = M + L      % ??? In an assignment  A(:) = B, the number of elements in A 
                     (occurs when scalar is on the left and vector is on the right)
 -----------------------------------------------------
 
+%% 18. Create struct array called Class with field values:title,semsester, and enrollment. Create 3 courses.
+Class(1).title = 'Fluid Mechanics and CFD';
+Class(1).semester = 'Spring 2018';
+Class(1).enrollment = 390;
+Class(2).title = 'Heat Transfer';
+Class(2).semester = 'Winter 2018';
+Class(2).enrollment = 240;
+Class(3).title = 'Advanced Materials';
+Class(3).semester = 'Spring 2019';
+Class(3).enrollment = 150;
 
+%% 19. Create a cell similar to previous structure (element/row).
+Class{1, 1} = 'Fluid Mechanics and CFD';
+Class{1, 2} = 'Spring 2018';
+Class{1, 3} = 390;
+Class{2, 1} = 'Heat Transfer';
+Class{2, 2} = 'Winter 2018';
+Class{2, 3} = 240;
+Class{3, 1} = 'Advanced Materials';
+Class{3, 2} = 'Spring 2019';
+Class{3, 3} = 150;
 
+%% 20. Assign the string 'Hello World' to the variable S.
+S = 'Hello World'
 
+%% 22. Return the size of array S.
+f = size(S)
 
+%% 23. Return the length of an array S.
+g = length(S)
+
+%% 26. Create a 1x3 cell array.
+b = cell(1, 3)
+
+%% 27. Create a 2x2 cell array containing 'dog', 'cat', 10, [23 5 4 93].
+v = {'dog', 'cat'; 10, [23 5 4 93]}
+
+%% 28. Assign pi/4 to the variable x.
+x = pi/4
+
+%% 29. Assign 1x100 array of zeros to the variable z.
+z = zeros(1,100)
+
+%% 30. Assign the array A = [1 3 5 ... 19 21].
+A = (1:2:21)
+
+%% 31. Display rhre third, fourth, and the seventh element of A.
+A([3 4 7])
 
 
 
