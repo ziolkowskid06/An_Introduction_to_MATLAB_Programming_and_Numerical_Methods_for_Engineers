@@ -31,7 +31,50 @@ N = str2num(S);
 class(S)
 class(N)
 
+%% 11. Assign 'HELLO' to s1 and 'hello' to s2. Prove that s1 and s2 are not equal, and they are equal if both are uppercase/lowercase.
+s1 = 'HELLO';
+s2 = 'hello';
+strcmp(s1,s2)
+strcmp(s1,upper(s2))
+strcmp(lower(s1),s2)
 
+%% 12. Generate following string:
+        - The word 'Enginerring' has 11 letters.
+        - The word 'Book' has 4 letters.
+        - The word 'MATLAB' has 6 letters.
+ 
+ sprintf('The word ''%s'' has 11 letters.', 'Engineering')
+ sprintf('The word ''%s'' has 4 letters.', 'Book')
+ sprintf('The word ''%s'' has 6 letters.', 'MATLAB')
+ 
+%% 13. Let x = 0:10 and y = 10:-1:0. Change y to show both variables are equal.
+x = 0:10;
+y = 10:-1:0;
+all(x == fliplr(y))      % Tests whether all the elements along various dimensions of an array are nonzero or logical 1 (true).
+isequal(x, fliplr(y))    % Alternative solution
+
+%% 15. ERRORs generation:
+x + 90            % ??? Undefined function or variable 'x'.
+-----------------------------------------------------
+8 = y             % ??? The expression to the left of the equals sign is not a valid target for an assignment.
+-----------------------------------------------------
+x = [1 2]]        % ??? Unbalanced or unexpected parenthesis or bracket.
+-----------------------------------------------------
+A = [1 2; 3 4];
+A(-1)             % ??? Subscript indices must either be real positive integers or logicals.
+-----------------------------------------------------
+z = [1 2 3];
+s = [4 5];
+t = [6; 7];
+vertcat(z,s)      % ??? Dimensions of matrices being concatenated are not consistent.
+horzcat(z,t)      % ??? Dimensions of matrices being concatenated are not consistent.
+-----------------------------------------------------
+L = [1 2 3];
+M = [4 5 6];
+K = [7 8 9];
+K(1) = M + L      % ??? In an assignment  A(:) = B, the number of elements in A and B must be the same. 
+                    (occurs when scalar is on the left and vector is on the right)
+-----------------------------------------------------
 
 
 
