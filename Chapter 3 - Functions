@@ -1,0 +1,22 @@
+1. Recall sinh. Write function [ ((exp(x)-exp(-x))/2 ]. Solve for x = [0,1,2].
+function [y] = mySinh(x)
+% [y] = mySinh(x)
+% calculate (exp(x)-exp(-x))/2
+% author: Damian Ziolkowski
+% date: 23/05/20
+y  = (exp(x)-exp(-x))/2;
+end
+----------------------------
+b = mySinh(0)   % 0
+c = mySinh(1)   % 1.1752
+d = mySinh(2)   % 3.6269
+
+2. Write the function to create the matrix M = [1 0 1 0 1; 0 1 0 1 0; 1 0 1 0 1; 0 1 0 1 0; 1 0 1 0 1] and display n x n matrix.
+function [M] = myCheckerBoard(n)
+% Create the n x n matrix M = [1 0 1 0 1; 0 1 0 1 0; 1 0 1 0 1; 0 1 0 1 0; 1 0 1 0 1]
+% author: Damian Ziolkowski
+& date: 23/05/20
+M = [1 0 1 0 1; 0 1 0 1 0; 1 0 1 0 1; 0 1 0 1 0; 1 0 1 0 1];
+M = M(1:n,1:n);
+end
+
