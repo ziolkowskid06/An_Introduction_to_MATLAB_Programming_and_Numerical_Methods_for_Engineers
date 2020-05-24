@@ -146,9 +146,16 @@ end
 ---------------------------------
 myWithinTolerance(0:.01:1, .5, .03)   % ans: [48    49    50    51    52    53]
 
-14. Write a function, where boundedA is equal to the array A wherever bottom<A<top, 
-    or equal to bottom when A<=bottom, or equal to top when A>=top.
-    
+14. Write a function, where boundedA is equal to the array A wherever bottom=<A=<top.
+function [boundedA] = myBoundingArray(A, top, bottom)
+% [boundedA] = myBoundingArray(A, top, bottom)
+% Chceck condition and dispaly results
+% author: Damian Ziolkowski
+% date: 24/05/20
+boundedA = A( (A>=bottom) & (A<=top) ); 
+end
+---------------------------------
+myBoundingArray(-5:5, 3 ,-3)    % ans: [ -3 -2 -1 0 1 2 3 ]    
   
 
 
