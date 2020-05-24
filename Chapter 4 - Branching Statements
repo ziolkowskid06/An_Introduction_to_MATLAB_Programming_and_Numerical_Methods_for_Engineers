@@ -1,0 +1,82 @@
+*1. Write a function to print status depending on temperature.
+function [status] = myThermoStat(temp, desiredTemp)
+% [status] = myThermoStat(temp, desiredTemp)
+% Change status of thermostat based on temperature and desired temperature.
+% author
+% date
+if temp < desiredTemp - 5
+    status = 'Heat';
+elseif temp > desiredTemp + 5
+    status = 'AC';
+else
+    status = 'off';
+end
+end % end myThermoStat
+-------------------------------------
+myThermoStat(65, 75)    % ans: Heat
+myThermoStat(75, 65)    % ans: AC
+myThermoStat(65, 63)    % ans: off
+
+*2. Nested branching example.
+function [out] = myNestedBranching(x, y)
+% [out] = myNestedBranching(x, y)
+% Nested Branching Nested Example
+% author
+% date
+if x > 2
+    if y < 2
+        out = x + y;
+    else
+        out = x - y;
+    end
+else
+    if y > 2;
+        out = x*y;
+    else
+        out = 0;
+    end
+end
+end % end myNestedBranching
+
+*3. Write myAdder2 to sum three inputs. Print error if the user does not input doubles.
+function [out] = myAdder2(a, b, c)
+% [out] = myAdder2(a, b, c)
+% out is the sum of a, b, and c
+% author
+% date
+% check for erroneus input
+if ~isa(a, 'double') || ~isa(b, 'double') || ~isa(c, 'double')
+    error('Inputs a, b, and c must be doubles.')
+end
+out = a + b + c;
+end  % end myAdder2
+
+*4. Write a function, that takes a double r, and a string calc as input arguments.
+function [out] = myCircCalc(r, calc)
+% [out] = myCircCalc(r, calc)
+% returns out = pi*r^2 if calc is 'are' and out = 2*pi*r if calc
+% is 'circumference'
+% author
+% date
+if strcmp(calc,'area')
+    out = pi*r.^2;
+elseif strcmp(calc, 'circumference')
+    out = 2*pi*r;
+end
+end   % end myCircCalc    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
