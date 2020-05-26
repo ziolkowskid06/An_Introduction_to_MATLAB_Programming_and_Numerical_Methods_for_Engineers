@@ -65,17 +65,63 @@ elseif strcmp(calc, 'circumference')
 end
 end   % end myCircCalc    
 ------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 
-1. 
+1. Write a function to calculate a tip according to the number of people taking part in the party.
+function [tip] = myTipCalc(bill, party)
+% [tip] = myTipCalc(bill, party)
+% Calculate the tip with respect to the number of people in the party.
+% author: Damian Ziolkowski
+% date: 25/05/20
+if (party <= 0 || bill <= 0)                  % Check if possitive number
+    error('Numbers must be possitive')
+elseif (party > 0 && party < 6)               %  tip is 15%, if less than 6 people
+    tip = .15 * bill;
+elseif (party >= 6 && party < 8)              %  tip is 18%, if less than 8 people
+    tip = .18 * bill;
+elseif (party >= 8 && party < 11)             %  tip is 20%, if less than 11 people
+    tip = .20 * bill;
+else                                          %  tip is 25%, otherwise
+    tip = .25 * bill;
+end
 
+end % end myTipCalc
+--------------------------------------
+myTipCalc(109.29, -1)        % ans: 'Numbers must be possitive'
+myTipCalc(109.29, 3)         % ans: 16.3935
+myTipCalc(109.29, 9)         % ans: 21.8580
+myTipCalc(109.29, 12)        % ans: 27.3225
 
+2. Write a function, where 'plus', 'minus', 'mult', 'div', adds, substracts, multiplies or divides to numbers respectively.  
+function [f] = myMultOperation(a, b, operation)
+% [f] = myMultiOperation(a, b, operation)
+% Make mathematical operation for two variables. Choose operation.
+% author: Damian Ziolkowski
+% date: 25/06/20
+if strcmp(operation, 'plus')       % Detect addition
+    f = a + b;
+elseif strcmp(operation, 'minus')  % Detect substraction
+    f = a - b;
+elseif strcmp(operation, 'mult')   % Detect multiplication
+    f = a .* b;
+elseif strcmp(operation, 'div')    % Detect division
+    f = a ./ b;
+else
+    error('The ''operation'' must include ''plus'', ''minus'', ''mult'', or ''div''.')
+end
 
+end % end myMultOperation
+-----------------------------------------
+x = [1 2 3 4]; y = [2 3 4 5];
+myMultOperation(x, y, 'plus')        % ans: [3 5 7 9]
+myMultOperation(x, y, 'minus')       % ans: [-1 -1 -1 -1]
+myMultOperation(x, y, 'mult')        % ans: [2 6 12 20]
+myMultOperation(x, y, 'div')         % ans: [0.5000 0.6667 0.7500 0.8000]
+myMultOperation(x, y, 'dog')         % ans: The 'operation' must include 'plus', 'minus', 'mult', or 'div'.
 
-
-
-
-
-
+3. Consider a triangle with vertices at (0,0), (1,0), and (0,1). 
+   Write a function to check if the point is inside, outside or in the border of the area. 
 
 
 
