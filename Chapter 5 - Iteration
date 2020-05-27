@@ -50,10 +50,72 @@ end % end myTrigOddEven
 myTrigOddEven([0.5 0.5 0.5 0.5 0.5 0.5 0.5]) % ans: 0.88 0.48 0.88 0.48 0.88 0.48
 
 5. Write a function to compute, the matrix product of P and Q.
+function [M] = myMatMult(P, Q)
+% [M] = myMatMult(P, Q)
+% Compute M, the matrix product of P and Q
+% author: Damian Ziolkowski
+% date: 26/05/20
+[rowP, colP] = size(P);
+[rowQ, colQ] = size(Q);
+M = zeros(rowP, colQ); 
+if (colP ~= rowQ)
+    error('Wrong dimensions. P must be [i x k] and Q must be [k x j].')
+else
+    for i = 1:rowP
+       for j = 1:colQ
+           theSum = 0;
+           for k = 1:colP
+               theSum = theSum + P(i,k) * Q(k,j); 
+           end
+           M(i,j) = theSum;
+       end
+    end
+end
+end % end MyMatMult
+--------------------------------------------
+ MyMatMult(ones(3,3), ones(3,3))      % ans: [3 3 3; 3 3 3; 3 3 3]
+ 
+ 6. Write a function to calculate how many years does it take to reach a goal.
+function [years] = mySavingPlan(P0, i, goal)
+% [years] = mySavingPlan(P0, i, goal)
+% Reach the goal from interest. Calculate how many years does it take.
+% i is interest, P0 is payment allowing money to use your money.
+% Compound interest is accumulated according to the formula. 
+% author: Damian Ziolkowski
+% date: 27/05/20
+years = 0;
+P = P0;
+while (P <= goal) 
+P = (1 + i) * P;
+years = years + 1;
+end
+end % end mySavingPlan
+--------------------------------------------
+mySavingPlan(1000, 0.05, 2000)        % ans: 15
+mySavingPlan(1000, 0.07, 2000)        % ans: 11
+mySavingPlan( 500, 0.07, 2000)        % ans: 21
 
+7. Write a function, where in is an array of indices i, where B(i) is 1.
+function [ind] = myFind(B)
+% [ind] = myFind(B)
+% Print array of idnices i where B(i) is 1.
+% Assume B is an array of only ones and zeros
+% author: Damian Ziolkowski
+% date: 27/05/20
+k = 0;
+for i = 1:length(B)
+    if (B(i) == 1)
+        k = k + 1;
+        ind(k) = i;
+    else
+        continue
+    end
+end
+end % end myFind
+--------------------------------------------
+myFind([1 0 1 1)        % ans: [1 3 4]
 
-
-
+8. 
 
 
 
