@@ -1,0 +1,73 @@
+2. Write a function to find the largest value in the array.
+function [M] = myMax(A)
+% [M] = myMax(A)
+% Find the largest value in the array
+% author: Damian Zilkowski
+% date: 26/05/20
+M = A(1);
+for i = 1:length(A)
+    if A(i) > M
+        M = A(i);
+    else
+        continue
+    end
+end
+end % end myMax
+-----------------------------------------------------
+myMax([2 20 39 4 12])      % ans: 39
+
+3. Write a function to print N the highest values in the array.
+function [M] = myNMax(A, N)
+% [M] = myNMax(A, N)
+% Print N largest elements in the array
+% Assumptions: N < length(M) && N < length(A), 
+%              A is one-dimensional(no duplicates)
+% author: Damian Ziolkowski
+% date: 26/05/20
+for i = 1:N
+    M(i) = max(A);
+    A(find(A == max(A))) = 0;
+end
+end % end myNMax
+-----------------------------------------------------
+myNMax([2 3 4 6 10 23 5 1 0], 4)     % ans: [23 10 6 5]
+
+4. Write a function to calculate sin (when even) and cos (when odd).
+function [Q] = myTrigOddEven(M)
+% [Q] = myTrigOddEven(M)
+% Calculate sin for even numbers or cos for odd numbers
+% author: Damian Ziolkowski
+% date: 27/05/20
+for i = 1:length(M)
+   if (rem(i,2) == 0)
+       Q(i) = sin(M(i));
+   else
+       Q(i) = cos(M(i));
+   end
+end
+end % end myTrigOddEven
+---------------------------------
+myTrigOddEven([0.5 0.5 0.5 0.5 0.5 0.5 0.5]) % ans: 0.88 0.48 0.88 0.48 0.88 0.48
+
+5. Write a function to compute, the matrix product of P and Q.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
