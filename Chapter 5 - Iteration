@@ -181,10 +181,73 @@ end % end myNPrimes
 myNPrimes(6)        ans: [2 3 5 7 11 13]
 
 11. Write a function to print first N numbers both a Fibonacci and prime number.
+function [fibPrimes] = myNFibPrimes(N)
+% [fibPrimes] = myNFibPrimes(N)
+% Print first N numbers both Fibonacci and Prime
+% author: Damian Ziolkowski
+% date: 30/05/20
+factor = 0;
+i = 1;
+fibPrimes = 0;
+k = 0;
+fibN = 1;
+fibSeq = [ 0 1 1];
+if (N == 1)
+    fibPrimes = 2;
+else
+    while (length(fibPrimes) < N)
+        while (i <= fibN)
+            if (rem(fibN,i) == 0)
+                factor = factor + 1;
+                i = i + 1;
+            else
+                i = i + 1;
+            end
+        end
+        if (factor == 2)
+            k = k + 1;
+            fibPrimes(k) = fibN;
+            factor = 0;
+            i = 1;
+            fibN = fibSeq(end) + fibSeq(end-1);
+            fibSeq(length(fibSeq)+1) = fibN;
+        else
+            i = 1;
+            factor = 0;
+            fibN = fibSeq(end) + fibSeq(end-1);
+            fibSeq(length(fibSeq)+1) = fibN;
+        end
+    end
+end
 
+end % end myNFibPrimes
+------------------------------------------------------
+myNFibPrimes(8)   % ans: [2 3 5 13 89 233 1597 28657]
 
+12. Write a function to calculate sin (if odd) or cos (if even).
+function [Q] = myTrigOddEven2(M)
+% [Q] = myTrigOddEven2(M)
+% Calculate sin(pi/M) if odd, or cos(pi/M) if even.
+% author: Damian Ziolkowski
+% date: 30/05/20
+if (size(M,1)~= 2 && size(M,2) ~= 2)
+    error('''M'' must be two-dimensional.')
+else
+    for i = 1:size(M,1)
+       for j = 1:size(M,2)
+          if (rem(M(i,j), 2) == 0) 
+              Q(i,j) = cos(pi/M(i,j));
+          else
+              Q(i,j) = sin(pi/M(i,j));
+          end
+       end
+    end  
+end
+end % end myTrigOddEven2
+------------------------------------------------------------
+myTrigOddEven2([3 4; 6 7])       % ans: [0.87 0.71; 0.87 0.43]
 
-
+13.
 
 
 
