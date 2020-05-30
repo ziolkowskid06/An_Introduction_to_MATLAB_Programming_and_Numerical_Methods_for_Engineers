@@ -115,7 +115,72 @@ end % end myFind
 --------------------------------------------
 myFind([1 0 1 1)        % ans: [1 3 4]
 
-8. 
+9. Write a function to check if the number is prime.
+function [out] = myIsPrime(n)
+% [out] = myIsPrime(n)
+% Check if a number is prime
+% author: Damian Ziolkowski
+% date: 25/05/20
+factor = 0;
+i = 1;
+while (i <= n) 
+    if (rem(n,i) == 0)
+        factor = factor + 1;
+        i = i + 1;
+    else
+        i = i + 1;
+    end    
+end
+if (factor == 2)   
+    out = 1;      % Is prime
+else
+    out = 0;      % Not prime
+end
+end % end myIsPrime
+
+10. Write a function to create first N prime numbers.
+function [primes] = myNPrimes(N)
+% [primes] = myNPrimes(N)
+% Print first N primes
+% author: Damian Ziolkowski
+% date: 25/05/20
+factor = 0;
+i = 1;
+primes = 0;
+j = 1;
+k = 0;
+if (N < 1)
+    error('Insert possitive number')
+elseif (N == 1)
+    primes = 2;
+else   
+    while (length(primes) < N)
+        while (i <= j)
+            if (rem(j,i) == 0)
+                factor = factor + 1;
+                i = i + 1;
+            else
+                i = i + 1;
+            end
+        end
+        if (factor <= 2)       % Is prime
+            k = k + 1;
+            primes(k) = j;
+            factor = 0;
+            j = j + 1;
+            i = 1;
+        else
+            i = 1;
+            j = j + 1;
+            factor = 0;
+        end
+    end
+end
+end % end myNPrimes
+--------------------------------------------------------------
+myNPrimes(6)        ans: [2 3 5 7 11 13]
+
+11. Write a function to print first N numbers both a Fibonacci and prime number.
 
 
 
