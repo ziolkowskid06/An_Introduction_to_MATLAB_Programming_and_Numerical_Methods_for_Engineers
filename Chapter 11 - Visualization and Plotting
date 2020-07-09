@@ -1,1 +1,211 @@
-s
+*1. Make a plot of the function f(x) = x^2 and g(x) = x^3 for -5 <= x <= 5. 
+Use different colors and markers for each function. Add title, labels and the legend. Adjust axis and turn the grid on.
+
+x = linspace(-5, 5, 100);
+hold on
+plot(x, x.^2, 'ko')
+plot(x, x.^3, 'r*')
+hold off
+title(sprintf('Plot of Various Polyniminals from %d to %d', x(1), x(end)))
+xlabel('x axis')
+ylabel('y axis')
+legend('quadratic', 'cubic')
+axis([-6 6 -10 10])
+grid on
+
+
+*2. For given arrays create a 2x3 subplot using: plot, scatter, bar, loglog, semilogx, and semilogy.
+
+%% Script for generating subplots of various
+
+% author
+% date
+
+%% clean start
+clc
+clear
+close all
+
+%% define data
+x = [0 1 2 3 4 5];
+y = [1 2 4 8 16 2];
+
+%% create subplot
+subplot(2,3,1)
+plot(x,y)
+title('Plot')
+xlabel('x')
+ylabel('y')
+grid on
+
+subplot(2,3,2)
+scatter(x,y)
+title('Scatter')
+xlabel('x')
+ylabel('y')
+grid on
+
+subplot(2,3,3)
+bar(x,y)
+title('Bar')
+xlabel('x')
+ylabel('y')
+grid on
+
+subplot(2,3,4)
+loglog(x,y)
+title('LogLog')
+xlabel('x')
+ylabel('y')
+grid on
+
+subplot(2,3,5)
+semilogx(x,y)
+title('Semilogx')
+xlabel('x')
+ylabel('y')
+grid on
+
+subplot(2,3,6)
+semilogy(x,y)
+title('Semilogy')
+xlabel('x')
+ylabel('y')
+grid on
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
