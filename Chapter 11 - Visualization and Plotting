@@ -1,5 +1,6 @@
 *1. Make a plot of the function f(x) = x^2 and g(x) = x^3 for -5 <= x <= 5. 
-Use different colors and markers for each function. Add title, labels and the legend. Adjust axis and turn the grid on.
+    Use different colors and markers for each function. Add title, labels and the legend. 
+    Adjust axis and turn the grid on.
 
 x = linspace(-5, 5, 100);
 hold on
@@ -12,7 +13,7 @@ ylabel('y axis')
 legend('quadratic', 'cubic')
 axis([-6 6 -10 10])
 grid on
-
+------------------------------------------------------------------------------------
 
 *2. For given arrays create a 2x3 subplot using: plot, scatter, bar, loglog, semilogx, and semilogy.
 
@@ -72,20 +73,116 @@ title('Semilogy')
 xlabel('x')
 ylabel('y')
 grid on
+----------------------------------------------------------------------------------------
 
+*3. Make a three-dimensional plot of the (x,y,t)
 
+t = [0:pi/50:10*pi];
+plot3(sin(t),cos(t),t)
+grid on
+axis square
+title('Parametric Curve')
+xlabel('x')
+ylabel('y')
+zlabel('t')
+----------------------------------------------------------------------------------------
 
+*4. Make 1x2 subplot of the surface f(x,y) = sin(x) * cos(x) for -5 <= x <= 5. 
+    Use surf and contour functions.
 
+x = -5:.2:5;
+y = -5:.2:5;
+[X,Y] = meshgrid(x,y);
+Z = sin(X) .* cos(Y);
+subplot(1,2,1)
+surf(X,Y,Z)
+title('Surface Plot using surf')
+xlabel('x')
+ylabel('y')
+zlabel('z')
+subplot(1,2,2)
+contour(X,Y,Z)
+title('Surface Plot using contour')
+xlabel('x')
+ylabel('y')
+----------------------------------------------------------------------------------------
 
+*5a. Create an animation of a red cirrcle following a blue sin wave
 
+%% Sin Wave Animation
+clc
+clear
+close all
 
+%% assign parameters
+N = 1000;
 
+%% assign x and y coordinates
+x = linspace(0, 6*pi, N);
+y = sin(x);
 
+for i = 1:N
+    
+    % create figure
+    clf
+    hold on
+    plot(x, y)
+    plot(x(i), y(i), 'ro')
+    grid on
+    axis tight
+    
+    title(sprintf('Sin Wave at (%f, %f)', x(i), y(i)))
+    xlabel('x')
+    ylabel('sin(x)')
+    
+    drawnow
+    
+end  % end for i
+----------------------------------------------------------------------------------------------
 
+*5b. Create an animation of a red cirrcle following a blue sin wave. Save in as an avifile.
+     (not suported now!!!)
 
+%% Sin Wave Animation
+clc
+clear
+close all
 
+%% assign parameters
+N = 1000;
 
+%% assign x and y coordinates
+x = linspace(0, 6*pi, N);
+y = sin(x);
 
+%% create avi file variable
+aviobj = avifile('test');
+
+for i = 1:N
+    
+    % create figure
+    clf
+    hold on
+    plot(x, y)
+    plot(x(i), y(i), 'ro')
+    grid on
+    axis tight
+    
+    title(sprintf('Sin Wave at (%f, %f)', x(i), y(i)))
+    xlabel('x')
+    ylabel('sin(x)')
+    
+    drawnow
+    
+    % get figure as frame
+    F = getframe(gcf);
+    
+    % add frame to avi object
+    aviobj = addframe(aviobj,F);
+    
+end  % end for i
+
+close(aviobj)
 
 
 
