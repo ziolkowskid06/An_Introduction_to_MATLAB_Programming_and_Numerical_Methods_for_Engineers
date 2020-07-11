@@ -208,10 +208,41 @@ close(aviobj)
    axis([-1, 20, -1, 7])
 ----------------------------------------------------------------------------------------------
 
-
-
-
-
+2. Generate a 2x2 subplot of y(x) for 0 <= x <= 100 using plot, semilogx, semilogy, and loglog.
+   Use a fine enough discretization in x. Give each plot axis labels and title. Turn the grid on.
+% author: Damian Ziolkowski
+% date: 11/07/20
+%% clean start
+    clc, clear, close all
+%% define data
+    x = 0:.1:100;
+    y = sqrt((100*((1-0.01*x.^2).^2)+0.02*x.^2)./(((1-x.^2).^2)+0.1*x.^2));
+%% create subplot
+    subplot(2,2,1)
+    plot(x,y)
+    title('Plot')
+    xlabel('X - axis')
+    ylabel('Y - axis')
+    grid on
+    subplot(2,2,2)
+    semilogx(x,y)
+    title('Semilogx')
+    xlabel('X - axis')
+    ylabel('Y - axis')
+    grid on
+    subplot(2,2,3)
+    semilogy(x,y)
+    title('Semilogy')
+    xlabel('X - axis')
+    ylabel('Y - axis')
+    grid on
+    subplot(2,2,4)
+    loglog(x,y)
+    title('Loglog')
+    xlabel('X - axis')
+    ylabel('Y - axis')
+    grid on
+----------------------------------------------------------------------------------------------
 
 
 
