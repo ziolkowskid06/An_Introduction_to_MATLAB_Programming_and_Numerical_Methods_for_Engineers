@@ -264,8 +264,12 @@ close(aviobj)
     ylabel('Y - axis')
     title('Plots of y_1 and y_2')
     legend('y_1 = 3 + exp(-x)sin(6x)', 'y_2 = 4 + exp(-x)cos(6x)')
+----------------------------------------------------------------------------------------------
 
-
+4. Use the hist function to plot a histogram of the 1000 randomly generated numbers.
+   Distribute numbers into 10 bins. Create the bar graph.
+% author: Damian Ziolkowski
+% date: 11/07/20
 
 
 
