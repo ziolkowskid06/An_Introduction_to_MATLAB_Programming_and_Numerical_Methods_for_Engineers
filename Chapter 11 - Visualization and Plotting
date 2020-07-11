@@ -269,8 +269,18 @@ close(aviobj)
 4. Use the hist function to plot a histogram of the 1000 randomly generated numbers.
    Distribute numbers into 10 bins. Create the bar graph.
 % author: Damian Ziolkowski
-% date: 11/07/20
-
+% date: 12/07/20
+%% clean start
+    clc, clear, close all
+%% define data 
+    x = randn(1000,1);
+    nbins = 10;
+    [counts, centres] = hist(x);
+    subplot(1,2,1)
+    hist(x,nbins);
+    subplot(1,2,2)
+    bar(centres, counts)
+----------------------------------------------------------------------------------------------
 
 
 
