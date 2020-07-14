@@ -335,15 +335,36 @@ close(aviobj)
     title('CONTOURF')
 ----------------------------------------------------------------------------------------------
 
+7. Write a function that plots a regular polygon with n sides and radius 1. Axis must be equal from -1 to 1, axis labels, title.
 
-
-
-
-
-
-
-
-
+function[] = myPolygon(n)
+% [] = myPolygon(n)
+% Plot a regular polygon with n sides and radius 1
+% author: Damian Ziolkowski
+% date: 14/07/20
+%% define data
+    numVertex = n;
+    radius = 1;
+    x = zeros(numVertex, 1);
+    y = zeros(numVertex, 1);
+    angles = 0:((2*pi)/numVertex):2*pi;
+    for i = 1:numVertex
+        y(i) = radius*cos(angles(i));
+        x(i) = radius*sin(angles(i));
+    end
+%% create plot
+    plot([x; x(1)], [y; y(1)], 'b+:')
+    hold on 
+    plot([-2 2], [0 0], 'k')
+    plot([0 0], [-2 2], 'k')
+    xlabel('X - axis')
+    ylabel('Y - axis')
+    title(sprintf('My Regular Polygone with %d sides', n))
+    xlim([-1 1])
+    ylim([-1 1])
+    axis equal
+    grid on
+----------------------------------------------------------------------------------------------
 
 
 
