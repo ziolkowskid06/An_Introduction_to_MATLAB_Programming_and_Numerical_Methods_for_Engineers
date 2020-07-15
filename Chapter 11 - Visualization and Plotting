@@ -399,82 +399,36 @@ for i = 1:k
 end
 ----------------------------------------------------------------------------------------------
 
-10. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+12. Write a function where x and y are handles to the functions x(t) and y(t) 
+function[] = myParametricPlotter(x,y,t)
+% [] = myParametricPlotter(x,y,t)
+% Plot parametric plot for the function handles x(t) anf y(t)
+% author: Damian Ziolkowski
+% date: 15/07/20
+plot3(x(t),y(t),t)
+xlabel('X - axis')
+ylabel('Y - axis')
+zlabel('Z - axis')
+title('My Parametric Plot')
+----------------------------------------------------------------------------------------------
+
+13. Write a function where F is a handle to the function F(x,y). Produce surf graph for 'surf' or contour graph for 'contour'.
+function[] = mySurfacePlotter(F,x,y,option)
+% [] = mySurfacePlotter(F, x, y, option)
+% Plot contour or surface for the function header
+% author: Damian Ziolkowski
+% date: 15/07/20
+[X,Y] = meshgrid(x,y);
+if option == 'plot1'
+    surf(X,Y,F(X,Y))
+    title('My Surface Plot')
+elseif option  == 'plot2'
+    contour(X,Y,F(X,Y))
+    title('My Contour Plot')
+else
+    error('option variable must be ''plot1'' or ''plot2''.')
+end
+
+xlabel('X - axis')
+ylabel('Y - axis')
+zlabel('Z - axis')
