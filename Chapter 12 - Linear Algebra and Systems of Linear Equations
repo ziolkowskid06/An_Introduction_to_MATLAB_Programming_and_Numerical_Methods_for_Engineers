@@ -1,0 +1,7 @@
+*1. Compute the angle between the vectors v = (10, 9, 3) and w = (2, 5, 12).
+v = [10, 9, 3];
+w = [2, 5, 12];
+theta = acos(v*w'/(norm(v)*norm(w)));
+
+*2. Compute cross product of v and w.
+v = [
