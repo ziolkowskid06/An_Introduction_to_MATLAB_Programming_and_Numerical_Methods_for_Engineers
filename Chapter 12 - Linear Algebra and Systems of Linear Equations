@@ -1,7 +1,7 @@
 *1. Compute the angle between the vectors v and w.
 v = [10, 9, 3];
 w = [2, 5, 12];
-theta = acos(v*w'/(norm(v)*norm(w)));
+theta = acos(v*w'/(norm(v)*norm(w)))
 
 *2. Compute cross product of v and w.
 v = [0 2 0];
@@ -16,7 +16,24 @@ I = eye(4);
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. Write a function where v1 and v2 are the column vectors of the same size and tol is a scalar larger than 0.
-   The output should be 1 if the angle between vecotrs is within tol, that is |pi/2-0|<tol, otherwise 0.
-   
+   The output should be 1 if the angle between vecotrs is within tol, that is |pi/2-alfa|<tol, otherwise 0.
+function [out] = myIsOrthogonal(v1,v2,tol)   
+% [out] = myIsOrthogonal(v1,v2,tol)
+% Check if the angle is within tol. v1 and v2 must be column vectors.
+% author: Damian Ziolkowski
+% date: 29/07/20
+
+if (size(v1, 2) ~= 1 || size(v2, 2) ~= 1)
+   error('Use column vectors')
+else
+   alfa = acos(v1*v2'/(norm(v1)*norm(v2)));
+
+
+
+end
+
+
+
+end % end of function
 
 
