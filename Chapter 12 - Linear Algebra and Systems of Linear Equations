@@ -25,13 +25,36 @@ function [out] = myIsOrthogonal(v1,v2,tol)
 if (size(v1, 2) ~= 1 || size(v2, 2) ~= 1)
    error('Use column vectors')
 else
-   alfa = acos(v1*v2'/(norm(v1)*norm(v2)));
+   alfa = acos(v1'*v2/(norm(v1')*norm(v2')));
    if abs((pi/2)-alfa)<tol
-      out = 1
+      out = 1;
    else
-      out = 0
+      out = 0;
    end
 end
 end % end of function
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
