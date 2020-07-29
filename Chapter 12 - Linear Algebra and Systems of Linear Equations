@@ -37,8 +37,27 @@ end % end of function
 
 4. Write a function, where A and B are matrices. Let rank(A)=n.
    Then B should be a matrix containing the first n columns of A that are all linearly independent. Note that this implies tht B is full rank.
-   
-
+function [B] = myMakeLinInd(A)   
+% [B] = myMakeLinInd(A)  
+% B cointains n columns of A,that are linearly independent. 
+% author: Damian Ziolkowski
+% date: 29/07/20
+n = rank(A);
+B = A(:,1);
+k = 2;
+for i = 2:size(A,2)
+     C = A(:,1:i);
+     if size(B,2) == n
+         break
+     elseif rank(C) > size(B,2)
+         B(:,k) = C(:,i);
+         k = k+1;
+     else
+         continue     
+     end
+end
+end % end of function   
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
