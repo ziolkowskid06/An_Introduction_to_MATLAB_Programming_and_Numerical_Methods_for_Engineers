@@ -35,7 +35,9 @@ end
 end % end of function
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+4. Write a function, where A and B are matrices. Let rank(A)=n.
+   Then B should be a matrix containing the first n columns of A that are all linearly independent. Note that this implies tht B is full rank.
+   
 
 
 
