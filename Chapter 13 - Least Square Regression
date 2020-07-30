@@ -65,9 +65,41 @@ ylabel('y');
 grid on
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-
+*4. Curve Fittnig with Polynomials using polyfit and polyval.
+%% Generate Data
+x1 = [0:2:20]';
+y1 = 0.1*x1.^2 + 1.2*x1 + 5;
+data = table(x1,y1);               % create table of data
+clear x1; clear y1;                % remove x1,y1 to save memory
+%% Finding the Polynomial Coefficients
+[p2] = polyfit(data.x1, data.y1, 2);           % if you certain for quadratic equation, use 2
+%% Copmuting Polynominal Data
+x2 = [1:2:19]';
+datafit = table(x2);
+clear x2;
+[datafit.y2p2] = polyval(p2, datafit.x2);      % add column to the table
+%% Scatter Plot
+figure(1);
+scatter(data.x1, data.y1, 100, 'fill',...
+'MarkerEdgeColor', [112/255, 48/255, 160/255],...
+'MarkerFaceColor', [0/255, 176/255, 80/255],...
+'LineWidth',1,...
+'MarkerFaceAlpha', 0.5,...
+'MarkerEdgeAlpha', 0.5);
+hold('on');
+scatter(datafit.x2ata.y1, 100, 'fill',...
+'MarkerEdgeColor', [112/255, 48/255, 160/255],...
+'MarkerFaceColor', [0/255, 176/255, 80/255],...
+'LineWidth',1,...
+'MarkerFaceAlpha', 0.5,...
+'MarkerEdgeAlpha', 0.5);
+hold('off');
+set(gca, 'FontSize', 20);
+xlabel('x');
+ylabel('y');
+title('Polynomial');
+grid('minor');
+legend('y1', 'location', 'NorthWest');
 
 
 
