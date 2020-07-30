@@ -87,19 +87,15 @@ scatter(data.x1, data.y1, 100, 'fill',...
 'MarkerFaceAlpha', 0.5,...
 'MarkerEdgeAlpha', 0.5);
 hold('on');
-scatter(datafit.x2ata.y1, 100, 'fill',...
-'MarkerEdgeColor', [112/255, 48/255, 160/255],...
-'MarkerFaceColor', [0/255, 176/255, 80/255],...
-'LineWidth',1,...
-'MarkerFaceAlpha', 0.5,...
-'MarkerEdgeAlpha', 0.5);
+plot(datafit.x2, datafit.y2p2, 'color', 'r', 'LineWidth', 2);
 hold('off');
-set(gca, 'FontSize', 20);
+set(gca, 'FontSize', 10);
 xlabel('x');
 ylabel('y');
 title('Polynomial');
 grid('minor');
-legend('y1', 'location', 'NorthWest');
+equation = sprintf('y = %fx^2 + %fx + %f', p2(1), p2(2), p2(3));
+legend('y1', equation, 'location', 'NorthWest');
 
 
 
