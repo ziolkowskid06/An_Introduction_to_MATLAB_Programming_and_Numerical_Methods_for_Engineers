@@ -1,0 +1,74 @@
+*1. Consider data x and y. Do last squares regression with an estimation function definded by Y(x) = alpha(1)*x + alpha(2)
+x = [0:0.01:1]';
+y = 1 + x + x.*rand(size(x));
+A = [x, ones(size(x))];       % the column of ones comes from x^0
+alpha = inv(A'*A)*A'*y;       % altrnatively: pinv(A)*y   or   A\y
+hold on
+plot(x, alpha(1)*x + alpha(2), 'r')
+plot(x, y, 'bo')
+xlabel('x')
+ylabel('y')
+axis([0 1 0 3])
+grid on
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*2. This example shows how to perform simple linear regression using the accidents dataset. Formula y1 = beta1*x or y2 = beta(1) + beta(2)*x
+    The example also shows how to calculate the coefficient of determination R^2 to evaluate the regressions: Rsq1 and Rsq2 for y1 nad y2 respectively.
+load accidents
+x = hwydata(:,14);             % Population of states
+y = hwydata(:,4);              % Accidents per state
+X = [ones(length(x),1) x];     % column of ones for beta(1)           
+format long                    % longer format for better accuracy
+beta1 = x\y;
+beta = X\y;
+y1 = beta1*x;
+y2 = X*beta;
+scatter(x,y)
+hold on 
+plot(x, y1)
+plot(x, y2, '--')
+xlabel('Population of state')
+ylabel('Fatal traffic accidents per state')
+title('Linear Regression Relation Between Accidents & Population')
+legend('Data','Slope','Slope & Intercept','Location','best');          % The best location of the legend
+grid on
+Rsq1 = 1 - sum((y - y1).^2)/sum((y - mean(y)).^2);
+Rsq2 = 1 - sum((y - y2).^2)/sum((y - mean(y)).^2);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
