@@ -42,11 +42,11 @@ y = [5 3 3];
 polyfit(x,y,2);              % 2 if you want to generate coefficients for quadratic equation (result: [2 -3 5], hence y = x^2 - 3*x + 5)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*4. To given function add noise and use regresssion. 
+*3b. To given function add noise and use regresssion. 
 clc; clear, close all
 f = @(x) x.^2 - 3*x + 5;      % create a function besed on coefficents calculated before 
 sigma = 1.5;                  % coefficent that increase noises in the function
-xmin = -1; xmax = 1;         
+xmin = -1; xmax = 5;         
 x = unifrnd(xmin, xmax, [100,1]);     % 100 points uniformly distributed  in the range of -1 and 1
 y = f(x) + sigma*randn(size(x));      % to given function add normally distributed random noises
 n = 2;                                % degree of the polynomial
@@ -56,14 +56,14 @@ xx = linspace(xmin, xmax, 100);
 figure; 
 plot(x, y, 'ro', 'MarkerSize', 8);
 hold on;
-plot(xx, yy 'b', 'LineWidth', 2);
-plot(xx, yy - 2*delta, 'k--');              % for 95% prediction below the curve
-plot(xx, yy + 2*delta, 'k--');              % for 95% prediction above the curve         
-legend('Data Poins', 'Fitted Polynomial', ');
-grid on;
+plot(xx, yy, 'b', 'LineWidth', 2);
+plot(xx, yy - 2*delta, 'k--');              % for 95% prediction interval below the curve
+plot(xx, yy + 2*delta, 'k--');              % for 95% prediction interval above the curve         
+legend('Data Poins', 'Fitted Polynomial', '95% Prediction Interval');
 xlabel('x');
 ylabel('y');
-
+grid on
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
