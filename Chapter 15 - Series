@@ -54,11 +54,19 @@ end
 hold on
 plot(x, Y, 'r-', 'LineWidth', 2)
 legend('Actual Function', sprintf('Taylor Series Expansion - %d^t^h order', N), 'Location', 'NorthWest') 
-
-
-
-
-
-
-
+-------------------------------------------------------------------------------------------------------------------------------------
+ 
+ *5. Calculate the sum i^2 for i = 1:4.
+% for-loop solution
+theSum = 0;
+for i = 1 : 4
+  theSum = theSum + i ^ 2;
+end
+% vectorized solution
+i = 1 : 4;
+theSum = sum(i .^ 2)
+% symbolic solution
+syms i                           % Creat symbolic variable 'i'
+theSum = symsum(i^2, i, 1, 4);   % Use symsum to run your summation operation
+-------------------------------------------------------------------------------------------------------------------------------------
 
