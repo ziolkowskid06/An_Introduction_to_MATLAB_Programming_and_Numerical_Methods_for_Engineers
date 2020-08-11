@@ -11,3 +11,5 @@ hold on
 plot(x_diff, exact_solution);
 max_error = max(abs(exact_solution-forward_diff))   % compute max error 
 ---------------------------------------------------------------------------------------------------------------------------
+
+*2. 
