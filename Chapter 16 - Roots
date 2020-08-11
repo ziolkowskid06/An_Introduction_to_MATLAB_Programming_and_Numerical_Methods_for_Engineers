@@ -23,7 +23,11 @@ ezplot(f)
 grid on
 -------------------------------------------------------------------------------------------------------------------------
 
-
+*5. Solve system of nonlinear equations: xy-5y+10=0 and x^3-y^2=2. 
+    Hint: x, y change to x(1) and x(2) respectively.
+clc; clear
+f = @(x) [x(1)*x(2)-5*x(2)+10; x(1)^3-x(2)^2-2];     % create function handle for equations
+[x, fval] = fsolve(f, [1 1])                         % find the root (x) at starting point (1,1), 
 
 
 
