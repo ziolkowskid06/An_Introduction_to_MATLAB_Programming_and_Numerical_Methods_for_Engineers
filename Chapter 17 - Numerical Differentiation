@@ -1,1 +1,13 @@
 *1. Show derivative of cos(x) and compute maximum error between numerical derivative and exact solution.
+clc; clear all; close all   % start clean
+h = 0.1;                    % step size
+x = 0:h:2*pi;               % define grid
+y = cos(x);                 % compute function
+forward_diff   = diff(y)/h;           % compute vector of forward differences
+x_diff         = x(1:length(x)-1);    % compute corresponding grid
+exact_solution = -sin(x_diff);        % compute exact solution
+plot(x_diff, forward_diff, 'LineStyle', '--');
+hold on
+plot(x_diff, exact_solution);
+max_error = max(abs(exact_solution-forward_diff))   % compute max error 
+---------------------------------------------------------------------------------------------------------------------------
