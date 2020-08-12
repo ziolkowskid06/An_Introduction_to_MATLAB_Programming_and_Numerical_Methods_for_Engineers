@@ -7,9 +7,14 @@ n = 11;                             % 11 points (10 subintervals)
 h = (b-a)/(n-1);                    % rectangle's length
 x = linspace(a,b,n);                % grid
 f = sin(x);                         % function
-I_riemannL   = h*sum(f(1:n-1))                            % Riemann Integral (left endpoint)
+I_riemannL   = h*sum(f(1:n-1))                                                  % Riemann Integral (left endpoint)
 err_riemannL = 2 - I_riemannL
-I_riemannR   = h*sum(f(2:n))                              % Riemann Integral (right endpoint)
+I_riemannR   = h*sum(f(2:n))                                                    % Riemann Integral (right endpoint)
 err_riemannR = 2 - I_riemannR
-I_mid        = h*sum(sin((x(1:n-1) + x(2:n))/2))          % Midpoint Rule
+I_mid        = h*sum(sin((x(1:n-1) + x(2:n))/2))                                % Midpoint Rule
 err_mid      = 2 - I_mid
+I_trap       = (h/2)*(f(1) + 2*sum(f(2:n-1)) + f(n))                            % Trapezoid Rule
+err_trap     = 2 - I_trap
+I_simp       = (h/3)*(f(1) + 2*sum(f(1:2:n-2)) + 4*sum(f(2:2:n-1)) + f(n))      % Simpson's Rule
+err_simp     = 2 - I_simp
+-----------------------------------------------------------------------------------------------------------------------------------------------
