@@ -1,0 +1,15 @@
+*1. Use all integration rules to approximate sin(x)dx over total interval [0 pi] with 11 evenly spaced grid points over the whole interval.
+    Compare this value to the exact value of 2.
+clc; clear
+a = 0;                              % left border
+b = pi;                             % right border
+n = 11;                             % 11 points (10 subintervals)
+h = (b-a)/(n-1);                    % rectangle's length
+x = linspace(a,b,n);                % grid
+f = sin(x);                         % function
+I_riemannL   = h*sum(f(1:n-1))                            % Riemann Integral (left endpoint)
+err_riemannL = 2 - I_riemannL
+I_riemannR   = h*sum(f(2:n))                              % Riemann Integral (right endpoint)
+err_riemannR = 2 - I_riemannR
+I_mid        = h*sum(sin((x(1:n-1) + x(2:n))/2))          % Midpoint Rule
+err_mid      = 2 - I_mid
