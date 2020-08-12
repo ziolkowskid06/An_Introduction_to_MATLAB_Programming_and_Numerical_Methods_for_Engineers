@@ -18,3 +18,15 @@ err_trap     = 2 - I_trap
 I_simp       = (h/3)*(f(1) + 2*sum(f(1:2:n-2)) + 4*sum(f(2:2:n-1)) + f(n))      % Simpson's Rule
 err_simp     = 2 - I_simp
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+*2. Use MATLAB built-in function approximate sin(x)dx over total interval [0 pi] with 11 evenly spaced grid points over the whole interval.
+    Compare this value to the exact value of 2.
+clc; clear
+a = 0;                              % left border
+b = pi;                             % right border
+n = 11;                             % 11 points (10 subintervals)
+h = (b-a)/(n-1);                    % rectangle's length
+x = linspace(a,b,n);                % grid
+f = sin(x);                         % function
+I_trapz = trapz(x,f)                % Trapezoid Rule
+-----------------------------------------------------------------------------------------------------------------------------------------------
