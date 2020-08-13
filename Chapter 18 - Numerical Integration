@@ -30,3 +30,29 @@ x = linspace(a,b,n);                % grid
 f = sin(x);                         % function
 I_trapz = trapz(x,f)                % Trapezoid Rule
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+*4. Integrate y(t) = t^2 + 2*t. Rearange the result.
+clc; clear;
+y = inline('t^2 + 2*t', 't')      % crate a function
+syms t                            % symbolic variable needed for symbolic integration
+int(y(t), t);                     % integrate a function
+pretty(ans)                       % after rearrangement                      
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+*5. Integrate h(n) = sin(n) + cos(n)^2 in a range of [-4 10].
+clc; clear;
+h = inline('sin(n) + cos(n)^2','n')     % crate a function
+syms n                                  % symbolic variable needed for symbolic integration
+h_int = int(h(n), n);                   % integrate a function
+sol = int(h(n), -4,10)                  % integration over the range
+double(sol)                             % rearrange the result
+pretty(h_int)                           % show function after integration
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
