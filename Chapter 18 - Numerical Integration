@@ -39,7 +39,7 @@ int(y(t), t);                     % integrate a function
 pretty(ans)                       % after rearrangement                      
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-*5. Integrate h(n) = sin(n) + cos(n)^2 in a range of [-4 10].
+*5. Calculate an integral of h(n) = sin(n) + cos(n)^2 over the range [-4 10].
 clc; clear;
 h = inline('sin(n) + cos(n)^2','n')     % crate a function
 syms n                                  % symbolic variable needed for symbolic integration
@@ -49,7 +49,10 @@ double(sol)                             % rearrange the result
 pretty(h_int)                           % show function after integration
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-
+*6. Calculate a double integral of 1/(sqrt(x+y)*(1+x+y)^2) over the range [0 1] [0 1-x].
+clc; clear;
+g = @(x,y) 1./(sqrt(x+y).*(1+x+y).^2)           % crate function handle
+integral2(g, 0, 1, 0, @(x) 1-x)                 % integration (use function handle!)
 
 
 
