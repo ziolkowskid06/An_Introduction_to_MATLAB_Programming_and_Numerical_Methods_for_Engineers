@@ -33,6 +33,23 @@ legend('Approximate', 'Exact')
  t       = 0:h:5; % define numerical grid
  w       = 4; % oscillation frequency of pendulum
  s0      = [1; 0];
- 
- M.E = [1, h; -w^2*h, 1];
- M.I = inv[1, -h/2; w^2+h/2,
+ M_E = [1, h; -w^2*h, 1];
+ M_I = inv([1, -h/2; w^2*h/2, 1]);
+ M_T = inv([1, -h/2; w^2*h/2, 1])*[1, h/2; -w^2*h/2, 1];
+ %% Do integrations
+ S_E = s0';
+ S_I = s0';
+ S_T = s0';
+ for j = 1:length(t)-1
+     S_E(j+1,:) = [M_E*S_E(j,:)']';
+     S_I(j+1,:) = [M_I*S_I(j,:)']';
+     S_T(j+1,:) = [M_T*S_T(j,:)']';
+end
+%% Plot Position Solutions
+plot(t, S_E(:,1), 'b-.', t, S_I(:,1), 'g:', t, S_T(:,1), 'r--', t, cos(w*t), 'k')
+axis([0 5 -3 3])
+grid on
+title('Solutions for Various Integration Schemes')
+xlabel('t')
+ylabel('\Theta (t)')
+legend('Explicit', 'Implicit', 'Trapepzoidal', 'Exact')
