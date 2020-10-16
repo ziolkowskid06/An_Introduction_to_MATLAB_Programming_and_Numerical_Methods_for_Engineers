@@ -1,6 +1,6 @@
 %%% *1. The differential equation df(t)/dt = e^(-1) with initial condition f0 = -1 has the exavt solution f(t) = -e^(-1).
-        Approximate the solution to this initial value problem between 0 and 1 in increments of 0.1 using the Explicity Euler Formula.
-        Plot the difference between the approximated solution and the exact solution.
+%%%     Approximate the solution to this initial value problem between 0 and 1 in increments of 0.1 using the Explicity Euler Formula.
+%%%     Plot the difference between the approximated solution and the exact solution.
 %% Euler Approximation For Exponential Function
 clc; clear all; close all;
 %% Define Parameters
