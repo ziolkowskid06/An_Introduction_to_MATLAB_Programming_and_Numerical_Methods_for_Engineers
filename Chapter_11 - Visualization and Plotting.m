@@ -1,7 +1,6 @@
-%% *1. Make a plot of the function f(x) = x^2 and g(x) = x^3 for -5 <= x <= 5. 
-       Use different colors and markers for each function. Add title, labels and the legend. 
-       Adjust axis and turn the grid on.
-
+%%% *1. Make a plot of the function f(x) = x^2 and g(x) = x^3 for -5 <= x <= 5. 
+%%%     Use different colors and markers for each function. Add title, labels and the legend. 
+%%%     Adjust axis and turn the grid on.
 x = linspace(-5, 5, 100);
 hold on
 plot(x, x.^2, 'ko')
@@ -15,7 +14,7 @@ axis([-6 6 -10 10])
 grid on
 ------------------------------------------------------------------------------------
 
-%% *2. For given arrays create a 2x3 subplot using: plot, scatter, bar, loglog, semilogx, and semilogy.
+%%% *2. For given arrays create a 2x3 subplot using: plot, scatter, bar, loglog, semilogx, and semilogy.
 
 %% Script for generating subplots of various
 
@@ -75,8 +74,7 @@ ylabel('y')
 grid on
 ----------------------------------------------------------------------------------------
 
-%% *3. Make a three-dimensional plot of the (x,y,t)
-
+%%% *3. Make a three-dimensional plot of the (x,y,t)
 t = [0:pi/50:10*pi];
 plot3(sin(t),cos(t),t)
 grid on
@@ -87,9 +85,8 @@ ylabel('y')
 zlabel('t')
 ----------------------------------------------------------------------------------------
 
-%% *4. Make 1x2 subplot of the surface f(x,y) = sin(x) * cos(x) for -5 <= x <= 5. 
-    Use surf and contour functions.
-
+%%% *4. Make 1x2 subplot of the surface f(x,y) = sin(x) * cos(x) for -5 <= x <= 5. 
+%%%     Use surf and contour functions.
 x = -5:.2:5;
 y = -5:.2:5;
 [X,Y] = meshgrid(x,y);
@@ -107,7 +104,7 @@ xlabel('x')
 ylabel('y')
 ----------------------------------------------------------------------------------------
 
-%% *5a. Create an animation of a red cirrcle following a blue sin wave
+%%% *5a. Create an animation of a red cirrcle following a blue sin wave
 
 %% Sin Wave Animation
 clc
@@ -140,8 +137,8 @@ for i = 1:N
 end  % end for i
 ----------------------------------------------------------------------------------------------
 
-%% *5b. Create an animation of a red cirrcle following a blue sin wave. Save in as an avifile.
-        (not suported now!!!)
+%%% *5b. Create an animation of a red cirrcle following a blue sin wave. Save in as an avifile.
+%%%      (not suported now!!!)
 
 %% Sin Wave Animation
 clc
@@ -188,8 +185,8 @@ close(aviobj)
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
-%% 1. Generate a plot of cycloid for 0 <= phi <= 2*pi using 1000 increments and r = 3.
-      Give a plot title and labels. Turn the grid on and modify axis.
+%%% 1. Generate a plot of cycloid for 0 <= phi <= 2*pi using 1000 increments and r = 3.
+%%%    Give a plot title and labels. Turn the grid on and modify axis.
 % author: Damian Ziolkowski
 % date: 11/07/20
 %% clean start
@@ -208,8 +205,8 @@ close(aviobj)
    axis([-1, 20, -1, 7])
 ----------------------------------------------------------------------------------------------
 
-%% 2. Generate a 2x2 subplot of y(x) for 0 <= x <= 100 using plot, semilogx, semilogy, and loglog.
-      Use a fine enough discretization in x. Give each plot axis labels and title. Turn the grid on.
+%%% 2. Generate a 2x2 subplot of y(x) for 0 <= x <= 100 using plot, semilogx, semilogy, and loglog.
+%%%    Use a fine enough discretization in x. Give each plot axis labels and title. Turn the grid on.
 % author: Damian Ziolkowski
 % date: 11/07/20
 %% clean start
@@ -244,8 +241,8 @@ close(aviobj)
     grid on
 ----------------------------------------------------------------------------------------------
 
-%% 3. PLot y1(x) and y2(x) for 0 <= x <= 5 on a single axis. 
-      Give the plot axis labels, a title and a legend.
+%%% 3. PLot y1(x) and y2(x) for 0 <= x <= 5 on a single axis. 
+%%%    Give the plot axis labels, a title and a legend.
 % author: Damian Ziółkowski
 % date: 11/07/20
 %% clean start
@@ -266,8 +263,8 @@ close(aviobj)
     legend('y_1 = 3 + exp(-x)sin(6x)', 'y_2 = 4 + exp(-x)cos(6x)')
 ----------------------------------------------------------------------------------------------
 
-%% 4. Use the hist function to plot a histogram of the 1000 randomly generated numbers.
-      Distribute numbers into 10 bins. Create the bar graph.
+%%% 4. Use the hist function to plot a histogram of the 1000 randomly generated numbers.
+%%%    Distribute numbers into 10 bins. Create the bar graph.
 % author: Damian Ziolkowski
 % date: 12/07/20
 %% clean start
@@ -282,7 +279,7 @@ close(aviobj)
     bar(centres, counts)
 ----------------------------------------------------------------------------------------------
 
-%% 5. Generate a pie chart consising of the students' grades.
+%%% 5. Generate a pie chart consising of the students' grades.
 % author: Damian Ziolkowski
 % date: 12/07/20
 %% clean start
@@ -296,7 +293,7 @@ close(aviobj)
     legend(labels)
 ----------------------------------------------------------------------------------------------
 
-%% 6. Let -4 <= x <= 4, -3 <= y <= 3, and Z(x,y). Create vectors of x and y with 100 evenly spaced points.
+%%% 6. Let -4 <= x <= 4, -3 <= y <= 3, and Z(x,y). Create vectors of x and y with 100 evenly spaced points.
       Create meshgrids X and Y. Compute Z from X and Y. Create 2x2 subplot: to first row use surf and mesh,
       and for second row use contour and contourf. Give titles, and axis labels.
 % author: Damian Ziolkowski
@@ -335,7 +332,7 @@ close(aviobj)
     title('CONTOURF')
 ----------------------------------------------------------------------------------------------
 
-%% 7. Write a function that plots a regular polygon with n sides and radius 1. Axis must be equal from -1 to 1, axis labels, title.
+%%% 7. Write a function that plots a regular polygon with n sides and radius 1. Axis must be equal from -1 to 1, axis labels, title.
 function[] = myPolygon(n)
 % [] = myPolygon(n)
 % Plot a regular polygon with n sides and radius 1
@@ -365,7 +362,7 @@ function[] = myPolygon(n)
     grid on
 ----------------------------------------------------------------------------------------------
 
-%% 8. Write a function, where f is a function handle and x is an array. 
+%%% 8. Write a function, where f is a function handle and x is an array. 
 function[] = myFunPlotter(f,x)
 % [] = myFunPlotter(f,x)
 % Plot a function handle
@@ -381,7 +378,7 @@ function[] = myFunPlotter(f,x)
     title(sprintf('Plot of %s', newFunctionName))
 ----------------------------------------------------------------------------------------------
 
-%% 9. Write a function that plots the set of polynomials.
+%%% 9. Write a function that plots the set of polynomials.
 function[] = myPolyPlotter(k,x)
 % [] = myPolyPlotter(k,x)
 % Plot the polynominal x^k. 
@@ -398,7 +395,7 @@ for i = 1:k
 end
 ----------------------------------------------------------------------------------------------
 
-%% 12. Write a function where x and y are handles to the functions x(t) and y(t) 
+%%% 12. Write a function where x and y are handles to the functions x(t) and y(t) 
 function[] = myParametricPlotter(x,y,t)
 % [] = myParametricPlotter(x,y,t)
 % Plot parametric plot for the function handles x(t) anf y(t)
@@ -411,7 +408,8 @@ zlabel('Z - axis')
 title('My Parametric Plot')
 ----------------------------------------------------------------------------------------------
 
-%% 13. Write a function where F is a handle to the function F(x,y). Produce surf graph for 'surf' or contour graph for 'contour'.
+%%% 13. Write a function where F is a handle to the function F(x,y). 
+%%%     Produce surf graph for 'surf' or contour graph for 'contour'.
 function[] = mySurfacePlotter(F,x,y,option)
 % [] = mySurfacePlotter(F, x, y, option)
 % Plot contour or surface for the function header
