@@ -1,4 +1,4 @@
-*1. Consider data x and y. Do last squares regression with an estimation function definded by Y(x) = alpha(1)*x + alpha(2)
+%%% *1. Consider data x and y. Do last squares regression with an estimation function definded by Y(x) = alpha(1)*x + alpha(2)
 x = [0:0.01:1]';
 y = 1 + x + x.*rand(size(x));
 A = [x, ones(size(x))];       % the column of ones comes from x^0
@@ -12,7 +12,7 @@ axis([0 1 0 3])
 grid on
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*2. This example shows how to perform simple linear regression using the accidents dataset. Formula y1 = beta1*x or y2 = beta(1) + beta(2)*x
+%%% *2. This example shows how to perform simple linear regression using the accidents dataset. Formula y1 = beta1*x or y2 = beta(1) + beta(2)*x
     The example also shows how to calculate the coefficient of determination R^2 to evaluate the regressions: Rsq1 and Rsq2 for y1 nad y2 respectively.
 load accidents
 x = hwydata(:,14);             % Population of states
@@ -36,13 +36,13 @@ Rsq1 = 1 - sum((y - y1).^2)/sum((y - mean(y)).^2);
 Rsq2 = 1 - sum((y - y2).^2)/sum((y - mean(y)).^2);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*3a. Find coefficents for the function, having three points. Polynomial Fitting using polyfit.
+%%% *3a. Find coefficents for the function, having three points. Polynomial Fitting using polyfit.
 x = [0 1 2];
 y = [5 3 3];
 polyfit(x,y,2);              % 2 if you want to generate coefficients for quadratic equation (result: [2 -3 5], hence y = x^2 - 3*x + 5)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*3b. To given function add noise and use regresssion. 
+%%% *3b. To given function add noise and use regresssion. 
 clc; clear, close all
 f = @(x) x.^2 - 3*x + 5;      % create a function besed on coefficents calculated before 
 sigma = 1.5;                  % coefficent that increase noises in the function
@@ -65,7 +65,7 @@ ylabel('y');
 grid on
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*4. Curve Fittnig with Polynomials using polyfit and polyval.
+%%% *4. Curve Fittnig with Polynomials using polyfit and polyval.
 %% Generate Data
 x1 = [0:2:20]';
 y1 = 0.1*x1.^2 + 1.2*x1 + 5;
@@ -96,31 +96,3 @@ title('Polynomial');
 grid('minor');
 equation = sprintf('y = %fx^2 + %fx + %f', p2(1), p2(2), p2(3));
 legend('y1', equation, 'location', 'NorthWest');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
