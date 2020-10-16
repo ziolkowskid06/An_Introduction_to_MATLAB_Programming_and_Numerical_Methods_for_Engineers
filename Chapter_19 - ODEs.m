@@ -1,6 +1,6 @@
-*1. The differential equation df(t)/dt = e^(-1) with initial condition f0 = -1 has the exavt solution f(t) = -e^(-1).
-    Approximate the solution to this initial value problem between 0 and 1 in increments of 0.1 using the Explicity Euler Formula.
-    Plot the difference between the approximated solution and the exact solution.
+%%% *1. The differential equation df(t)/dt = e^(-1) with initial condition f0 = -1 has the exavt solution f(t) = -e^(-1).
+        Approximate the solution to this initial value problem between 0 and 1 in increments of 0.1 using the Explicity Euler Formula.
+        Plot the difference between the approximated solution and the exact solution.
 %% Euler Approximation For Exponential Function
 clc; clear all; close all;
 %% Define Parameters
@@ -24,9 +24,9 @@ axis tight
 legend('Approximate', 'Exact')
 -------------------------------------------------------------------------
 
-*2. Use the Euler Explicit, Euler Implicit, and Trapezoidal Formulas to soleve the pendulum equation over the time interval [0, 5]
-    in increments of 0.1 and for an initial solution of s0 = [1 0]'. For the model parameters using sqrt(g/l)=4. 
-    Plot the approximate solution on a single graph.
+%%% *2. Use the Euler Explicit, Euler Implicit, and Trapezoidal Formulas to soleve the pendulum equation over the time interval [0, 5]
+%%%     in increments of 0.1 and for an initial solution of s0 = [1 0]'. For the model parameters using sqrt(g/l)=4. 
+%%%     Plot the approximate solution on a single graph.
  clc; clear all, close all;
  %% Define Parameters
  h       = 0.1; % define step size
