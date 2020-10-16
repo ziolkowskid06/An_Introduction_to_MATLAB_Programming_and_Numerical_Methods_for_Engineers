@@ -1,4 +1,4 @@
-*1. Plot the sin function along with the first, third, fifth and seventh order Taylor series approximations.
+%% *1. Plot the sin function along with the first, third, fifth and seventh order Taylor series approximations.
 clc;clear;close all
 c = {'b', 'g', 'r', 'c'};
 x = linspace(-pi, pi, 200);
@@ -17,7 +17,7 @@ legend('First Order', 'Third Order', 'Fifth Order', 'Seventh Order', 'Analytic')
 axis tight
 -------------------------------------------------------------------------------------------------------------------------------------
 
-*2. Use for-loop to calculate two series 
+%% *2. Use for-loop to calculate two series 
 n=5000;
 series1=0;
 series2=0;
@@ -29,14 +29,14 @@ for i=1:n
 end
 -------------------------------------------------------------------------------------------------------------------------------------
 
-*3. Use symbolic method to calculate series. 
+%% *3. Use symbolic method to calculate series. 
 syms n;
 f=1/n^2*((n+1)/n)^n;
 series = symsum(f,n,1,inf);
 vpa(series)                   % Variable-Precision Arithmetic, evaluates each element of the symbolic input
 -------------------------------------------------------------------------------------------------------------------------------------
 
-*4. Use Taylor Series expansion for e(x) for -2 <= x <= 2. 
+%% *4. Use Taylor Series expansion for e(x) for -2 <= x <= 2. 
 clear; clc; close all
 x = -2:0.1:2;
 y = exp(x);
@@ -56,7 +56,7 @@ plot(x, Y, 'r-', 'LineWidth', 2)
 legend('Actual Function', sprintf('Taylor Series Expansion - %d^t^h order', N), 'Location', 'NorthWest') 
 -------------------------------------------------------------------------------------------------------------------------------------
  
- *5. Calculate the sum i^2 for i = 1:4.
+%% *5. Calculate the sum i^2 for i = 1:4.
 % for-loop solution
 theSum = 0;
 for i = 1 : 4
@@ -69,4 +69,3 @@ theSum = sum(i .^ 2)
 syms i                           % Creat symbolic variable 'i'
 theSum = symsum(i^2, i, 1, 4);   % Use symsum to run your summation operation
 -------------------------------------------------------------------------------------------------------------------------------------
-
