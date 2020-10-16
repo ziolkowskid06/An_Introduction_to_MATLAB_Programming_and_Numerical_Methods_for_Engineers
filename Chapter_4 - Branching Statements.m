@@ -1,4 +1,4 @@
-*1. Write a function to print status depending on temperature.
+%% *1. Write a function to print status depending on temperature.
 function [status] = myThermoStat(temp, desiredTemp)
 % [status] = myThermoStat(temp, desiredTemp)
 % Change status of thermostat based on temperature and desired temperature.
@@ -17,7 +17,7 @@ myThermoStat(65, 75)    % ans: Heat
 myThermoStat(75, 65)    % ans: AC
 myThermoStat(65, 63)    % ans: off
 
-*2. Nested branching example.
+%% *2. Nested branching example.
 function [out] = myNestedBranching(x, y)
 % [out] = myNestedBranching(x, y)
 % Nested Branching Nested Example
@@ -38,7 +38,7 @@ else
 end
 end % end myNestedBranching
 
-*3. Write myAdder2 to sum three inputs. Print error if the user does not input doubles.
+%% *3. Write myAdder2 to sum three inputs. Print error if the user does not input doubles.
 function [out] = myAdder2(a, b, c)
 % [out] = myAdder2(a, b, c)
 % out is the sum of a, b, and c
@@ -51,7 +51,7 @@ end
 out = a + b + c;
 end  % end myAdder2
 
-*4. Write a function, that takes a double r, and a string calc as input arguments.
+%% *4. Write a function, that takes a double r, and a string calc as input arguments.
 function [out] = myCircCalc(r, calc)
 % [out] = myCircCalc(r, calc)
 % returns out = pi*r^2 if calc is 'are' and out = 2*pi*r if calc
@@ -68,7 +68,7 @@ end   % end myCircCalc
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
 
-1. Write a function to calculate a tip according to the number of people taking part in the party.
+%% 1. Write a function to calculate a tip according to the number of people taking part in the party.
 function [tip] = myTipCalc(bill, party)
 % [tip] = myTipCalc(bill, party)
 % Calculate the tip with respect to the number of people in the party.
@@ -93,7 +93,7 @@ myTipCalc(109.29, 3)         % ans: 16.3935
 myTipCalc(109.29, 9)         % ans: 21.8580
 myTipCalc(109.29, 12)        % ans: 27.3225
 
-2. Write a function, where 'plus', 'minus', 'mult', 'div', adds, substracts, multiplies or divides to numbers respectively.  
+%% 2. Write a function, where 'plus', 'minus', 'mult', 'div', adds, substracts, multiplies or divides to numbers respectively.  
 function [f] = myMultOperation(a, b, operation)
 % [f] = myMultiOperation(a, b, operation)
 % Make mathematical operation for two variables. Choose operation.
@@ -120,7 +120,7 @@ myMultOperation(x, y, 'mult')        % ans: [2 6 12 20]
 myMultOperation(x, y, 'div')         % ans: [0.5000 0.6667 0.7500 0.8000]
 myMultOperation(x, y, 'dog')         % ans: The 'operation' must include 'plus', 'minus', 'mult', or 'div'.
 
-4. Write a function, to print first 10 elements of array (add zeros if is less than 10 elements).
+%% 4. Write a function, to print first 10 elements of array (add zeros if is less than 10 elements).
 function [out] = myMakeSize10(x)
 % [out] = myMakeSize10(x)
 % Print array with first 10 elements, if less than 10 pad with enough zeros.
@@ -136,7 +136,7 @@ end % end myMakeSize10
 -----------------------------------------
 myMakeSize10([2 4 5])   % ans: [2 4 5 0 0 0 0 0 0 0]
 
-6. Wrtie a function to print grade related to the score.
+%% 6. Wrtie a function to print grade related to the score.
 function [grade] = myLetterGrade(percent)
 % [grade] = myLetterGrade(percent)
 % Print the grade according to percent.
@@ -181,7 +181,7 @@ else
 end
 end % end myLetterGrade
 
-7. Write a function to inform, when two inputs are higher then 10 compare to third one.
+%% 7. Write a function to inform, when two inputs are higher then 10 compare to third one.
 function [response] = myNukeAlarm(S1, S2, S3)
 % [response] = myNukeAlarm(S1, S2, S3)
 % Alarm if any two inputs are higher than 10 compare to third one
@@ -197,7 +197,7 @@ end % end myNukeAlarm
 myNukeAlarm(20,17,5)      % ans: alarm
 myNukeAlarm(10,11,12)     % ans: normal
 
-8. Write a function to calculate the roots of quadratic equation.
+%% 8. Write a function to calculate the roots of quadratic equation.
 function [nRoots, r] = myNRoots(a, b, c)
 % [nRoots, r] = myNRoots(a, b, c)
 % Calculate the roots of quadratic equation.
@@ -222,7 +222,7 @@ end % end myNRoots
 [nRoots, r] = myNRoots(3, 4,  5)    % ans: nRoots: -2, r = [-0.6667 + 1.1055i, -0.6667 - 1.1055i]
 [nRoots, r] = myNRoots(2, 4,  2)    % ans: nRoots: 1, r = -1
 
-9. Write a function to calculate handles to functions.
+%% 9. Write a function to calculate handles to functions.
 function [h] = mySplitFunction(f, g, a, b, x)
 % [h] = mySplitFunction(f, g, a, b, x)
 % Calculate handles to function f(x) or g(x)
