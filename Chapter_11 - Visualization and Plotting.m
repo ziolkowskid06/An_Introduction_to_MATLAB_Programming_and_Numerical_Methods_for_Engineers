@@ -294,8 +294,8 @@ close(aviobj)
 ----------------------------------------------------------------------------------------------
 
 %%% 6. Let -4 <= x <= 4, -3 <= y <= 3, and Z(x,y). Create vectors of x and y with 100 evenly spaced points.
-      Create meshgrids X and Y. Compute Z from X and Y. Create 2x2 subplot: to first row use surf and mesh,
-      and for second row use contour and contourf. Give titles, and axis labels.
+%%%   Create meshgrids X and Y. Compute Z from X and Y. Create 2x2 subplot: to first row use surf and mesh,
+%%%   and for second row use contour and contourf. Give titles, and axis labels.
 % author: Damian Ziolkowski
 % date: 12/07/20
 %% clean start
