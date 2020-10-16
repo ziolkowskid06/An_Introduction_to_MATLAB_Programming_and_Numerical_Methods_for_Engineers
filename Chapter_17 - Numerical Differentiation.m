@@ -1,4 +1,4 @@
-*1. Show derivative of cos(x) and compute maximum error between numerical derivative and exact solution.
+%% *1. Show derivative of cos(x) and compute maximum error between numerical derivative and exact solution.
 clc; clear all; close all   % start clean
 h = 0.1;                    % step size
 x = 0:h:2*pi;               % define grid
@@ -12,7 +12,7 @@ plot(x_diff, exact_solution);
 max_error = max(abs(exact_solution-forward_diff))   % compute max error 
 ---------------------------------------------------------------------------------------------------------------------------
 
-*2. Show derivative of sin(x) and compute maximum error between numerical derivative and exact solution.
+%% *2. Show derivative of sin(x) and compute maximum error between numerical derivative and exact solution.
 clc; clear; close all;
 x = linspace(0, 2*pi, 100);
 y = sin(x);
@@ -29,7 +29,7 @@ plot(x, yp, 'LineStyle', '--')
 legend('sin(x)', 'numerical derivative', 'exact solution')
 ---------------------------------------------------------------------------------------------------------------------------
  
- *3. Symbolic function differentiation.
+%% *3. Symbolic function differentiation.
 clc; clear; close all;
 syms x;
 y = x^3 + 2*x +10;
@@ -37,27 +37,10 @@ yp = diff(y, x);     % dy/dx
 pretty(yp)           % nice view of the function
 ---------------------------------------------------------------------------------------------------------------------------
 
-*4. Compute the second order of differentiation for f(x) = 5*x^4.
+%% *4. Compute the second order of differentiation for f(x) = 5*x^4.
 clc; clear; close all
 syms x;
 y = 5*x^4;
 order = 2;
 diff(y, order)
 ---------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
