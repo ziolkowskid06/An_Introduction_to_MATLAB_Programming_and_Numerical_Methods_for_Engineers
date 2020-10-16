@@ -1,4 +1,4 @@
-2. Write a function to find the largest value in the array.
+%% 2. Write a function to find the largest value in the array.
 function [M] = myMax(A)
 % [M] = myMax(A)
 % Find the largest value in the array
@@ -16,7 +16,7 @@ end % end myMax
 -----------------------------------------------------
 myMax([2 20 39 4 12])      % ans: 39
 
-3. Write a function to print N the highest values in the array.
+%% 3. Write a function to print N the highest values in the array.
 function [M] = myNMax(A, N)
 % [M] = myNMax(A, N)
 % Print N largest elements in the array
@@ -32,7 +32,7 @@ end % end myNMax
 -----------------------------------------------------
 myNMax([2 3 4 6 10 23 5 1 0], 4)     % ans: [23 10 6 5]
 
-4. Write a function to calculate sin (when even) and cos (when odd).
+%% 4. Write a function to calculate sin (when even) and cos (when odd).
 function [Q] = myTrigOddEven(M)
 % [Q] = myTrigOddEven(M)
 % Calculate sin for even numbers or cos for odd numbers
@@ -49,7 +49,7 @@ end % end myTrigOddEven
 ---------------------------------
 myTrigOddEven([0.5 0.5 0.5 0.5 0.5 0.5 0.5]) % ans: 0.88 0.48 0.88 0.48 0.88 0.48
 
-5. Write a function to compute, the matrix product of P and Q.
+%% 5. Write a function to compute, the matrix product of P and Q.
 function [M] = myMatMult(P, Q)
 % [M] = myMatMult(P, Q)
 % Compute M, the matrix product of P and Q
@@ -75,7 +75,7 @@ end % end MyMatMult
 --------------------------------------------
  MyMatMult(ones(3,3), ones(3,3))      % ans: [3 3 3; 3 3 3; 3 3 3]
  
- 6. Write a function to calculate how many years does it take to reach a goal.
+%% 6. Write a function to calculate how many years does it take to reach a goal.
 function [years] = mySavingPlan(P0, i, goal)
 % [years] = mySavingPlan(P0, i, goal)
 % Reach the goal from interest. Calculate how many years does it take.
@@ -95,7 +95,7 @@ mySavingPlan(1000, 0.05, 2000)        % ans: 15
 mySavingPlan(1000, 0.07, 2000)        % ans: 11
 mySavingPlan( 500, 0.07, 2000)        % ans: 21
 
-7. Write a function, where in is an array of indices i, where B(i) is 1.
+%% 7. Write a function, where in is an array of indices i, where B(i) is 1.
 function [ind] = myFind(B)
 % [ind] = myFind(B)
 % Print array of idnices i where B(i) is 1.
@@ -115,7 +115,7 @@ end % end myFind
 --------------------------------------------
 myFind([1 0 1 1)        % ans: [1 3 4]
 
-9. Write a function to check if the number is prime.
+%% 9. Write a function to check if the number is prime.
 function [out] = myIsPrime(n)
 % [out] = myIsPrime(n)
 % Check if a number is prime
@@ -138,7 +138,7 @@ else
 end
 end % end myIsPrime
 
-10. Write a function to create first N prime numbers.
+%% 10. Write a function to create first N prime numbers.
 function [primes] = myNPrimes(N)
 % [primes] = myNPrimes(N)
 % Print first N primes
@@ -180,7 +180,7 @@ end % end myNPrimes
 --------------------------------------------------------------
 myNPrimes(6)        ans: [2 3 5 7 11 13]
 
-11. Write a function to print first N numbers both a Fibonacci and prime number.
+%% 11. Write a function to print first N numbers both a Fibonacci and prime number.
 function [fibPrimes] = myNFibPrimes(N)
 % [fibPrimes] = myNFibPrimes(N)
 % Print first N numbers both Fibonacci and Prime
@@ -224,7 +224,7 @@ end % end myNFibPrimes
 ------------------------------------------------------
 myNFibPrimes(8)   % ans: [2 3 5 13 89 233 1597 28657]
 
-12. Write a function to calculate sin (if odd) or cos (if even).
+%% 12. Write a function to calculate sin (if odd) or cos (if even).
 function [Q] = myTrigOddEven2(M)
 % [Q] = myTrigOddEven2(M)
 % Calculate sin(pi/M) if odd, or cos(pi/M) if even.
