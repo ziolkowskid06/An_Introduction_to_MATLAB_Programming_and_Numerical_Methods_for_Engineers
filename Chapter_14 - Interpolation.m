@@ -1,4 +1,4 @@
-*1. Find linear interpolation at x = 1.5.
+%% *1. Find linear interpolation at x = 1.5.
 X = [0 1 2];
 Y = [1 3 2];
 x = 1.5;
@@ -10,7 +10,7 @@ title(sprintf('Linear interpolation at x = %g', x))
 grid on
 ---------------------------------------------------------------------------------------------------------------------------
 
-*2. Plot cubic spline interpolation.
+%% *2. Plot cubic spline interpolation.
 X = [0 1 2];
 Y = [1 3 2];
 x = linspace(0, 2, 100);
@@ -22,7 +22,7 @@ title('Cubic Spline Interpolation')
 grid on
 ---------------------------------------------------------------------------------------------------------------------------
 
-*3. Plot all type of interpolation
+%% *3. Plot all type of interpolation
 clc; clear; close all
 x = [1 2 4 5];
 y = [2 2 3 1]; 
@@ -41,7 +41,7 @@ for i = 1:length(method)
 end
 ---------------------------------------------------------------------------------------------------------------------------
 
-*4. Interpolation for 2D gridded data. 
+%% *4. Interpolation for 2D gridded data. 
 clc; clear; close all
 [X, Y] = meshgrid(-5:5);
 Z = peaks(X, Y);
@@ -56,7 +56,7 @@ surf(XX, YY, ZZ)
 title('Model Output')
 ---------------------------------------------------------------------------------------------------------------------------
 
-*5. Use Lagrange's interpolation to find Y at X = 55.
+%% *5. Use Lagrange's interpolation to find Y at X = 55.
 x = [0 20 40 60 80 100];
 y = [26.0 48.6 61.6 71.2 74.8 75.2];
 n = length(x) - 1;
